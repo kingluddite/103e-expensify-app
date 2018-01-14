@@ -28,12 +28,14 @@
     "style-loader": "^0.19.1",
     "stylelint": "^8.4.0",
     "stylelint-order": "^0.8.0",
+    "uuid": "^3.1.0",
     "validator": "^9.2.0",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.9.7"
   },
   "devDependencies": {
     "babel-eslint": "^8.0.3",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "eslint": "^4.12.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-prettier": "^2.9.0",
