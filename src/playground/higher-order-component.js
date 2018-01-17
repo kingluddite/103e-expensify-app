@@ -1,5 +1,5 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 
 const Info = props => (
   <div>
@@ -37,5 +37,5 @@ const AuthInfo = requireAuthentication(Info);
 
 ReactDOM.render(
   <AuthInfo isAuthenticated={false} info="These are the details" />,
-  document.getElementById('app')
+  document.getElementById("app")
 );
