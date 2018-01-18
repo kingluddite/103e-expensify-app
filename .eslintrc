@@ -25,6 +25,16 @@
     }],
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "no-underscore-dangle": [0],
+    "semi": [2, "always"],
+    "react/prop-types": 0,
+    "react/jsx-boolean-value": 0,
+    "no-console": 0,
+    "jsx-a11y/anchor-is-valid": [ "error", {
+      "components": [ "Link" ],
+      "specialLink": [ "to" ]
+    }],
+    "consistent-return": 0,
+    "array-callback-return": 0,
   },
   "plugins": [
     "flowtype",

@@ -76,9 +76,8 @@ const expensesReducer = (state = expensesReducerDefaultState, action) => {
             ...expense,
             ...action.updates
           };
-        } else {
-          return expense;
         }
+        return expense;
       });
     default:
       return state;
@@ -127,8 +126,8 @@ const filtersReducer = (state = filtersReducerDefaultState, action) => {
 };
 
 // Get visible expenses
-const getVisibleExpenses = (expenses, { text, sortBy, startDate, endDate }) => {
-  return expenses
+const getVisibleExpenses = (expenses, { text, sortBy, startDate, endDate }) =>
+  expenses
     .filter(expense => {
       const startDateMatch =
         typeof startDate !== "number" || expense.createdAt >= startDate;
@@ -147,7 +146,6 @@ const getVisibleExpenses = (expenses, { text, sortBy, startDate, endDate }) => {
         return a.amount < b.amount ? 1 : -1;
       }
     });
-};
 // Store creation
 
 const store = createStore(
