@@ -19,11 +19,11 @@
   "rules": {
     "prettier/prettier": ["error", {
       "singleQuote": true,
-      "trailingComma": "all",
       // "bracketSpacing": false,
       "jsxBracketSameLine": true,
     }],
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "comma-dangle": ["error", "always"],
     "no-underscore-dangle": [0],
     "semi": [2, "always"],
     "react/prop-types": 0,
