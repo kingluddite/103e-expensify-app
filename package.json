@@ -6,7 +6,7 @@
   "scripts": {
     "serve": "live-server public/",
     "build": "webpack --watch",
-    "lint": "eslint --fix src/*.js",
+    "lint": "eslint --verbose --fix src/*.js",
     "pretest": "npm run lint",
     "dev-server": "webpack-dev-server",
     "precommit": "lint-staged",
