@@ -19,8 +19,7 @@ const ExpenseListFilters = props => (
         } else if (e.target.value === 'amount') {
           props.dispatch(sortByAmount());
         }
-      }}
-    >
+      }}>
       <option value="date">Date</option>
       <option value="amount">Amount</option>
     </select>
