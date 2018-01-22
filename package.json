@@ -15,7 +15,7 @@
   },
   "lint-staged": {
     "*.js": [
-      "prettier --single-quote --write",
+      "eslint --fix",
       "git add"
     ],
     "*.css": "stylelint",
@@ -24,8 +24,10 @@
   "dependencies": {
     "css-loader": "^0.28.7",
     "live-server": "^1.2.0",
+    "moment": "^2.20.1",
     "normalize.css": "^7.0.0",
     "react": "^16.2.0",
+    "react-dates": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-modal": "^3.1.10",
     "react-redux": "^5.0.6",
