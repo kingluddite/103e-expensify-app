@@ -7,60 +7,60 @@ module.exports = env => {
     entry: './src/app.js',
     output: {
       path: path.join(__dirname, 'public'),
-      filename: 'bundle.js'
+      filename: 'bundle.js',
     },
     module: {
       rules: [
         {
           loader: 'babel-loader',
           test: /\.js$/,
-          exclude: /node_modules/
+          exclude: /node_modules/,
         },
         {
           test: /\.js$/,
           exclude: /node_modules/,
-          loader: ['babel-loader', 'eslint-loader']
+          loader: ['babel-loader', 'eslint-loader'],
         },
         {
           test: /\.s?css$/,
-          use: ['style-loader', 'css-loader', 'sass-loader']
-        }
-      ]
+          use: ['style-loader', 'css-loader', 'sass-loader'],
+        },
+      ],
     },
     devtool: isProduction ? 'source-map' : 'cheap-module-eval-source-map',
     devServer: {
       contentBase: path.join(__dirname, 'public'),
-      historyApiFallback: true
-    }
+      historyApiFallback: true,
+    },
   };
   module.exports = {
     entry: './src/app.js',
     output: {
       path: path.join(__dirname, 'public'),
-      filename: 'bundle.js'
+      filename: 'bundle.js',
     },
     module: {
       rules: [
         {
           loader: 'babel-loader',
           test: /\.js$/,
-          exclude: /node_modules/
+          exclude: /node_modules/,
         },
         {
           test: /\.js$/,
           exclude: /node_modules/,
-          loader: ['babel-loader', 'eslint-loader']
+          loader: ['babel-loader', 'eslint-loader'],
         },
         {
           test: /\.s?css$/,
-          use: ['style-loader', 'css-loader', 'sass-loader']
-        }
-      ]
+          use: ['style-loader', 'css-loader', 'sass-loader'],
+        },
+      ],
     },
-    devtool: isProduction ? 'source-map' : 'cheap-module-eval-source-map',
+    devtool: 'cheap-module-eval-source-map',
     devServer: {
       contentBase: path.join(__dirname, 'public'),
-      historyApiFallback: true
-    }
+      historyApiFallback: true,
+    },
   };
 };
