@@ -1,5 +1,7 @@
 node_modules
 *.swp
 *js.swp
-public/scripts
 public/bundle.js
+public/bundle.js.map
+public/styles.css
+public/styles.css.map

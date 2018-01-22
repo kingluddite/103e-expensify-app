@@ -11,7 +11,9 @@
     "pretest": "npm run lint",
     "dev-server": "webpack-dev-server",
     "precommit": "lint-staged",
-    "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check"
+    "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
+    "serve": "node server/server.js",
+    "heroku-postbuild": "yarn run build:prod"
   },
   "lint-staged": {
     "*.js": [
@@ -23,6 +25,7 @@
   },
   "dependencies": {
     "css-loader": "^0.28.7",
+    "express": "^4.16.2",
     "live-server": "^1.2.0",
     "moment": "^2.20.1",
     "normalize.css": "^7.0.0",
