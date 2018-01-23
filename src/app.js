@@ -4,16 +4,10 @@ import { Provider } from 'react-redux';
 import 'normalize.css/normalize.css';
 import AppRouter from './routers/AppRouter';
 import configureStore from './store/configureStore';
-import getVisibleExpenses from './selectors/expenses';
 import './styles/styles.scss';
+import './firebase/firebase';
 
 const store = configureStore();
-
-const state = store.getState();
-const visibleExpenses = getVisibleExpenses(state.expenses, state.filters);
-console.log(visibleExpenses);
-
-console.log(store.getState());
 
 const jsx = (
   <Provider store={store}>

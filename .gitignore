@@ -1,5 +1,5 @@
 node_modules
 *.swp
 *js.swp
-public/scripts
-public/bundle.js
+*~
+public/dist/
