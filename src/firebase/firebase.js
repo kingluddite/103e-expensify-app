@@ -11,20 +11,62 @@ const config = {
 
 firebase.initializeApp(config);
 
+// change for refresh
 const database = firebase.database();
 
-database.ref().set({
-  name: 'John Wayne',
-  age: 22,
-  isSingle: false,
-  location: {
-    city: 'LA',
-    country: 'United States',
-  },
-});
+const onValueChange = snapshot => {
+  console.log(snapshot.val());
+};
 
-database.ref('location/city').set('Colorado');
-database.ref('attributes').set({
-  height: 73,
-  weight: 150,
-});
+database.ref().on('value', onValueChange);
+
+setTimeout(() => {
+  database.ref('age').set(28);
+}, 3500);
+setTimeout(() => {
+  database.ref().off();
+}, 7000);
+setTimeout(() => {
+  database.ref('age').set(23);
+}, 10500);
+// database
+//   .ref('location/city')
+//   .once('value')
+//   .then(snapshot => {
+//     const val = snapshot.val();
+//     console.log(val);
+//   })
+//   .catch(e => {
+//     console.log('Error fetching data', e);
+//   });
+// database
+//   .ref()
+//   .set({
+//     name: 'John Wayne',
+//     age: 22,
+//     stressLevel: 3,
+//     job: {
+//       title: 'Stunt driver',
+//       company: 'MGM',
+//     },
+//     location: {
+//       city: 'LA',
+//       country: 'United States',
+//     },
+//   })
+//   .then(() => {
+//     console.log('Data is saved');
+//   })
+//   .catch(e => {
+//     console.log('This failed.', e);
+//   });
+
+// Change the stressLevel to a 9
+// Change job.company to Amazon
+// Change location.city to Seattle
+
+// database.ref().update({
+//   stressLevel: 9,
+//   'job/company': 'Amazon',
+//   'location/city': 'Seattle',
+// });
