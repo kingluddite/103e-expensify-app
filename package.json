@@ -13,7 +13,7 @@
     "eslint-check": "eslint --print-config .eslintrc.js | eslint-config-prettier-check",
     "start": "node server/server.js",
     "heroku-postbuild": "yarn run build:prod",
-    "test": "jest"
+    "test": "jest --config=jest.config.json"
   },
   "lint-staged": {
     "*.js": [
@@ -33,7 +33,9 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.7",
+    "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.1",
     "eslint": "4.15.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-last": "0.0.5",
@@ -74,8 +76,6 @@
     "uuid": "^3.1.0",
     "validator": "^9.2.0",
     "webpack": "^3.10.0"
-    "enzyme": "^3.3.0",
-    "enzyme-to-json": "^3.3.0"
   },
   "devDependencies": {
     "jest": "^22.1.4",

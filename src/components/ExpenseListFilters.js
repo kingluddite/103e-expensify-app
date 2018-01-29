@@ -1,8 +1,5 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import 'react-dates/initialize';
-import { DateRangePicker } from 'react-dates';
-import 'react-dates/lib/css/_datepicker.css';
 
 import {
   setTextFilter,
@@ -44,7 +41,8 @@ class ExpenseListFilters extends React.Component {
             } else if (e.target.value === 'amount') {
               this.props.dispatch(sortByAmount());
             }
-          }}>
+          }}
+        >
           <option value="date">Date</option>
           <option value="amount">Amount</option>
         </select>
@@ -66,7 +64,7 @@ class ExpenseListFilters extends React.Component {
 }
 
 const mapStateToProps = state => ({
-  filters: state.filters
+  filters: state.filters,
 });
 
 export default connect(mapStateToProps)(ExpenseListFilters);
