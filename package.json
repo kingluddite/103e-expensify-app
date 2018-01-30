@@ -58,6 +58,7 @@
     "moment": "^2.20.1",
     "node-sass": "^4.7.2",
     "normalize.css": "^7.0.0",
+    "numeral": "^2.0.6",
     "prettier": "1.10.2",
     "prettier-eslint": "^8.7.5",
     "prettier-eslint-cli": "^4.4.0",

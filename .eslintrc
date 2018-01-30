@@ -23,6 +23,7 @@
     "react/prop-types": 0,
     "react/jsx-boolean-value": 0,
     "no-console": 0,
+    "import/no-named-as-default": 0,
     "jsx-a11y/anchor-is-valid": [ "error", {
       "components": [ "Link" ],
       "specialLink": [ "to" ]
