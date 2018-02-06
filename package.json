@@ -19,9 +19,7 @@
     "*.js": [
       "eslint --fix",
       "git add"
-    ],
-    "*.css": "stylelint",
-    "*.scss": "stylelint --syntax=scss"
+    ]
   },
   "dependencies": {
     "babel-cli": "^6.26.0",
@@ -74,8 +72,6 @@
     "redux-thunk": "^2.2.0",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.19.1",
-    "stylelint": "^8.4.0",
-    "stylelint-order": "^0.8.0",
     "uuid": "^3.1.0",
     "validator": "^9.2.0",
     "webpack": "^3.10.0"
