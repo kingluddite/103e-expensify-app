@@ -5,9 +5,11 @@ import { startLogin } from '../actions/auth';
 export const LoginPage = props => (
   <div className="box-layout">
     <div className="box-layout__box">
-      <h1 className="box-layout__title">Expensified App</h1>
+      <h1 className="box-layout__title">Expensified</h1>
       <p>It&apos;s time to get your expenses in order</p>
-      <button onClick={props.startLogin}>Login</button>
+      <button className="button" onClick={props.startLogin}>
+        Login with Google
+      </button>
     </div>
   </div>
 );
